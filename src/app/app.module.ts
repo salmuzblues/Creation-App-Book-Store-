@@ -5,9 +5,10 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { BookDetailsComponent } from './books/book-details/book-details.component';
-import { BookStoreService } from './book-store.service';
+import { BookStoreService } from './books/book-store.service';
 import { BooksListComponent } from './books/books-list/books-list.component';
 import { NewBookComponent } from './books/new-book/new-book.component';
+import {AppRouting} from './app-routing';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { NewBookComponent } from './books/new-book/new-book.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AppRouting
   ],
   providers: [BookStoreService],
   bootstrap: [AppComponent]
