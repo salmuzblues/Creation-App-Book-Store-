@@ -31,4 +31,13 @@ export class BookStoreService {
     return this.http.delete(url, { headers: this.headers })
       .map(response => response.json());
   }
+  addBook( book: Book) {
+  const url = `${this.baseUrl}/books`;
+  /* The JSON.stringify() method converts a JavaScript value to a JSON string, optionally replacing values if a replacer function is specified, or optionally
+  including only the specified properties if a replacer array is specified.
+  The Map operator applies a function of your choosing to each item emitted by the source Observable,
+   and returns an Observable that emits the results of these function applications. */
+  const body = JSON.stringify(book);
+  return this.http.post(url, body, {headers: this.headers}).map(response => response.json());
+  }
 }
