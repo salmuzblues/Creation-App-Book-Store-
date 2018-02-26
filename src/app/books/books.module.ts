@@ -12,9 +12,9 @@ import {BookStoreService} from './book-store.service';
 @NgModule({
   imports: [
     CommonModule,
-    BooksRoutingModule,
     ReactiveFormsModule,
-    HttpModule
+    HttpModule,
+    BooksRoutingModule
   ],
   declarations: [
     BooksListComponent,
